@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# Guard: refuse to run inside the tmpl.nvim template repo itself
+REMOTE_URL=$(git remote get-url origin 2>/dev/null || true)
+if [[ "$REMOTE_URL" == *"tmpl.nvim"* ]]; then
+    echo "Error: this script must not be run inside the tmpl.nvim template repo" >&2
+    exit 1
+fi
+
 # Prompt for variables
 read -r -p "github org (e.g. your-org): " ORG
 read -r -p "plugin name (e.g. myplugin): " NAME
