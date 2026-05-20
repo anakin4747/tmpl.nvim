@@ -2,6 +2,7 @@ FROM archlinux:base-20260111.0.480139
 
 RUN pacman -Syu --noconfirm \
     cloc \
+    cocogitto \
     curl \
     git \
     jq \
