@@ -45,8 +45,7 @@ done
 # Stage substituted files
 git add "${FILES[@]}"
 
-# Remove this script
-git rm --force init.sh
+git rm --force init.sh README.md
 
 # Commit
 git commit -m "init: configure plugin as ${ORG}/${NAME}"
