@@ -50,3 +50,5 @@ git rm --force init.sh
 
 # Commit
 git commit -m "init: configure plugin as ${ORG}/${NAME}"
+
+git tag "v0.1.0"
