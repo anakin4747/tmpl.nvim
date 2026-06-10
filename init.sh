@@ -14,7 +14,7 @@ if [[ -z "$ORG" || -z "$NAME" ]]; then
 fi
 
 # Rename plugin/@NAME@.vim -> plugin/<name>.vim
-git mv "plugin/@NAME@.vim" "plugin/${NAME}.vim"
+git mv "plugin/@NAME@.lua" "plugin/${NAME}.lua"
 
 # Rename tests/@NAME@_spec.lua -> tests/<name>_spec.lua
 git mv "tests/@NAME@_spec.lua" "tests/${NAME}_spec.lua"
@@ -22,7 +22,7 @@ git mv "tests/@NAME@_spec.lua" "tests/${NAME}_spec.lua"
 # Substitute placeholder tokens in affected files
 FILES=(
     ".cqfdrc"
-    "plugin/${NAME}.vim"
+    "plugin/${NAME}.lua"
     "tests/minimal_init.lua"
     "tests/${NAME}_spec.lua"
 )
