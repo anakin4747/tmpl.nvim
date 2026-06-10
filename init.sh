@@ -13,6 +13,14 @@ if [[ -z "$ORG" || -z "$NAME" ]]; then
     exit 1
 fi
 
+if [[ "$NAME" == *".git" ]]; then
+    NAME="${NAME%.git}"
+fi
+
+if [[ "$NAME" == *".nvim" ]]; then
+    NAME="${NAME%.nvim}"
+fi
+
 # Rename plugin/@NAME@.vim -> plugin/<name>.vim
 git mv "plugin/@NAME@.lua" "plugin/${NAME}.lua"
 
