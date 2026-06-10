@@ -33,6 +33,7 @@ FILES=(
     "plugin/${NAME}.lua"
     "tests/minimal_init.lua"
     "tests/${NAME}_spec.lua"
+    "cog.toml"
 )
 
 for f in "${FILES[@]}"; do
