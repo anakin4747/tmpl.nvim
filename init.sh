@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Guard: refuse to run inside the tmpl.nvim template repo itself
