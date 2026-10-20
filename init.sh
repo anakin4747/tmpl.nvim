@@ -49,6 +49,6 @@ git add "${FILES[@]}"
 git rm --force init.sh README.md
 
 # Commit
-git commit -m "init: configure plugin as ${ORG}/${NAME}"
+git commit -m "chore: configure plugin as ${ORG}/${NAME}"
 
 git tag "v0.1.0"
